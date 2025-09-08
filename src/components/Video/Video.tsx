@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet-async'
 export const Video = () => {
   const origin = window.location.origin
   const materialUrl = origin + '/#/video'
-  const cover = origin + '/assets/cover.jpg'
-  const video = origin + '/assets/video.mp4'
+  const cover = origin + '/video-preview/assets/cover.jpg'
+  const video = origin + '/video-preview/assets/video.mp4'
 
   return (
     <div style={{ padding: 16 }}>

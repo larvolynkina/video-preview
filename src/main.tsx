@@ -21,20 +21,20 @@ const App = () => (
 )
 
 function Home() {
-  const origin = window.location.origin
-  const cover = origin + '/assets/cover.jpg'
-  const video = origin + '/assets/video.mp4'
+  const secondVideoUrl = '/video-preview/second-video.html'
 
   return (
     <div style={{ padding: 24 }}>
-      <h1>Главная страница</h1>
+      <h1>Тест метатегов для видео</h1>
+      <a
+        href={secondVideoUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Видео на статичном html
+      </a>
       <p>
-        Здесь плеер с видео и <strong>статические OG-теги</strong> (в index.html).
-      </p>
-
-      <Video />
-      <p>
-        <Link to="/video">Открыть /video</Link>
+        <Link to="/video">Открыть video на SPA</Link>
       </p>
     </div>
   )
