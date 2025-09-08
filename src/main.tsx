@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -21,12 +20,22 @@ const App = () => (
   </HelmetProvider>
 )
 
-const Home = () => {
+function Home() {
+  const origin = window.location.origin
+  const cover = origin + '/assets/cover.jpg'
+  const video = origin + '/assets/video.mp4'
+
   return (
     <div style={{ padding: 24 }}>
-      <h1>Helmet Video Test</h1>
-      <p>Мини-приложение для проверки метатегов react-helmet-async.</p>
-      <Link to="/video">Открыть страницу с видео</Link>
+      <h1>Главная страница</h1>
+      <p>
+        Здесь плеер с видео и <strong>статические OG-теги</strong> (в index.html).
+      </p>
+
+      <Video />
+      <p>
+        <Link to="/video">Открыть /video</Link>
+      </p>
     </div>
   )
 }
